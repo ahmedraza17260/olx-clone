@@ -40,6 +40,10 @@ textarea {
   display: flex;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .bl {
   display: block;
 }
@@ -125,4 +129,23 @@ button {
 
 .cfff {
   color: #ffffff;
+}
+
+.anim {
+  transition: all 0.2s linear 0s;
+}
+
+.placeholder {
+  background: #ccc;
+  animation: placeholder 1s infinite linear;
+}
+
+@keyframes placeholder {
+  /* 0% {
+    opacity: 0.5;
+  } */
+
+  50% {
+    opacity: 0.5;
+  }
 }
