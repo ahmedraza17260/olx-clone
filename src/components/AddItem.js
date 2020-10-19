@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
-import { Card } from "react-bootstrap";
+// import { Card } from "react-bootstrap";
 
 function AddItem({ id, image, price, title, location, time }) {
   // if ("placeholder" in props)
