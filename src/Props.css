@@ -136,7 +136,7 @@ button {
 }
 
 .placeholder {
-  background: #ccc;
+  /* background: #ccc; */
   animation: placeholder 1s infinite linear;
 }
 
