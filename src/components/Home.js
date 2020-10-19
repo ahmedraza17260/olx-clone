@@ -112,7 +112,7 @@ function Home() {
                 // image="../images/image.jpg"
                 // image="https://apollo-singapore.akamaized.net/v1/files/ix3b8fb918fn-PK/image;s=200x400;q=60"
                 // image="https://pngimg.com/uploads/running_shoes/running_shoes_PNG5827.png"
-                image="http://www.pngmart.com/files/1/Nike-Shoes.png"
+                image="https://purepng.com/public/uploads/large/purepng.com-running-shoesrunning-shoesrunningshoessportingphysical-activitiesstyle-17015281857684savq.png"
                 price={2000}
                 title="Nike Running Shoe"
                 location="Karachi"
