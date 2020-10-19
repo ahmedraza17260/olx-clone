@@ -1,13 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useEffect } from "react";
+import React from "react";
 import { useState } from "react";
 import AddItem from "./AddItem";
 import nextId from "react-id-generator";
-import Carousel from "react-material-ui-carousel";
 
 function Home() {
-  const [list, setList] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [list, setList] = useState([]);
+  // const [loading, setLoading] = useState(true);
 
   // useEffect(() => {
   //   if (loading) {
