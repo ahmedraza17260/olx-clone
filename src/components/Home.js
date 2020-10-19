@@ -1,6 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
-import { useState } from "react";
 import AddItem from "./AddItem";
 import nextId from "react-id-generator";
 
