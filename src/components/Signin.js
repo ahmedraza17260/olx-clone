@@ -1,14 +1,20 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { auth } from "./firebase";
+import { providerGo, providerFb, auth } from "./firebase";
+import { actionTypes } from "./reducer";
+import { Button } from "@material-ui/core";
+import { useStateValue } from "./StateProvider";
+
 import "./Signin.css";
 
 function Signin() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // const [{ user }, dispatch] = useStateValue();
 
-  const signIn = (e) => {
+  const signInEP = (e) => {
     e.preventDefault();
     auth
       .signInWithEmailAndPassword(email, password)
@@ -17,6 +23,86 @@ function Signin() {
       })
       .catch((error) => alert(error.message));
   };
+
+  const registerEP = (e) => {
+    e.preventDefault();
+
+    auth
+      .createUserWithEmailAndPassword(email, password)
+      .then((auth) => {
+        // it successfully created a new user with email and password
+        if (auth) {
+          history.push("/");
+        }
+      })
+      .catch((error) => alert(error.message));
+  };
+  const signInGo = () => {
+    auth
+      .signInWithPopup(providerGo)
+      .then(function (result) {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        // ...
+      })
+      .catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
+  };
+  const signInFb = () => {
+    auth
+      .signInWithPopup(providerFb)
+      .then(function (result) {
+        // This gives you a Facebook Access Token. You can use it to access the Facebook API.
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        // ...
+      })
+      .catch(function (error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      });
+  };
+
+  // const signInGo = () => {
+  //   auth
+  //     .signInWithPopup(providerGo)
+  //     .then((result) => {
+  //       dispatch({
+  //         type: actionTypes.SET_USER,
+  //         user: result.user,
+  //       });
+  //     })
+  //     .catch((error) => alert(error.message));
+  // };
+
+  // const signInFb = () => {
+  //   auth
+  //     .signInWithPopup(providerFb)
+  //     .then((result) => {
+  //       dispatch({
+  //         type: actionTypes.SET_USER,
+  //         user: result.user,
+  //       });
+  //     })
+  //     .catch((error) => alert(error.message));
+  // };
 
   return (
     <div className="login">
@@ -45,7 +131,7 @@ function Signin() {
             />
             <button
               type="submit"
-              onClick={signIn}
+              onClick={signInEP}
               className="login__signInButton"
             >
               Sign In
@@ -56,6 +142,28 @@ function Signin() {
             Sale. Please see our Privacy Notice, our Cookies Notice and our
             Interest-Based Ads Notice.
           </p>
+
+          <button onClick={registerEP} className="login__signInButton">
+            Create your OLX Account
+          </button>
+
+          <hr />
+
+          <Button
+            className="login__signInButton"
+            type="submit"
+            onClick={signInGo}
+          >
+            Sign with Google
+          </Button>
+          <br />
+          <Button
+            className="login__signInButton"
+            type="submit"
+            onClick={signInFb}
+          >
+            Sign with Facebook
+          </Button>
         </div>
       </div>
     </div>
