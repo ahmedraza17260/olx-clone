@@ -43,7 +43,7 @@ function Header() {
           <SearchIcon className="go s24 cfff" />
         </div>
         <div className="actions flex aic">
-          <Link to="/account/signin" className="fontb color s16 noulh noul">
+          <Link to="/signin" className="fontb color s16 noulh noul">
             Sign in
           </Link>
           <button className="sell flex color aic">
