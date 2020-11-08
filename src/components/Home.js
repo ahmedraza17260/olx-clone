@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import AddItem from "./AddItem";
 import nextId from "react-id-generator";
 
@@ -44,6 +44,7 @@ function Home() {
             <div className="home__row col-lg-3 col-sm-12 col-md-6">
               <AddItem
                 id={nextId()}
+                category="Cars"
                 // image="../images/image.jpg"
                 // image="https://apollo-singapore.akamaized.net/v1/files/ix3b8fb918fn-PK/image;s=200x400;q=60"
                 image="https://cache4.pakwheels.com/system/car_generation_pictures/4962/original/Honda_Civic_Facelift_2019.jpg?1555253134"
@@ -57,6 +58,7 @@ function Home() {
             <div className="home__row col-lg-3 col-sm-12 col-md-6">
               <AddItem
                 id={nextId()}
+                category="Cars"
                 // image="../images/image.jpg"
                 // image="https://apollo-singapore.akamaized.net/v1/files/ix3b8fb918fn-PK/image;s=200x400;q=60"
                 image="https://cache2.pakwheels.com/system/car_generation_pictures/5260/original/alto.jpg?1595597920"
@@ -70,6 +72,7 @@ function Home() {
             <div className="home__row col-lg-3 col-sm-12 col-md-6">
               <AddItem
                 id={nextId()}
+                category="Cars"
                 // image="../images/image.jpg"
                 // image="https://apollo-singapore.akamaized.net/v1/files/ix3b8fb918fn-PK/image;s=200x400;q=60"
                 image="https://cache3.pakwheels.com/system/car_generation_pictures/4564/original/Suzuki_Cultus_2017_(1).jpg?1493101375"
@@ -83,6 +86,7 @@ function Home() {
             <div className="home__row col-lg-3 col-sm-12 col-md-6">
               <AddItem
                 id={nextId()}
+                category="Cars"
                 // image="../images/image.jpg"
                 // image="https://apollo-singapore.akamaized.net/v1/files/ix3b8fb918fn-PK/image;s=200x400;q=60"
                 image="https://cache1.pakwheels.com/system/car_generation_pictures/4664/original/Toyota_Corolla.jpg?1503296685"
@@ -96,6 +100,7 @@ function Home() {
             <div className="home__row col-lg-3 col-sm-12 col-md-6">
               <AddItem
                 id={nextId()}
+                category="Land & Plots"
                 // image="../images/image.jpg"
                 // image="https://apollo-singapore.akamaized.net/v1/files/ix3b8fb918fn-PK/image;s=200x400;q=60"
                 image="https://imganuncios.mitula.net/1_kanal_house_for_sale_in_lahore_dha_phase_4_7580121561382757846.jpg"
@@ -109,6 +114,7 @@ function Home() {
             <div className="home__row col-lg-3 col-sm-12 col-md-6">
               <AddItem
                 id={nextId()}
+                category="Clothes & Other"
                 // image="../images/image.jpg"
                 // image="https://apollo-singapore.akamaized.net/v1/files/ix3b8fb918fn-PK/image;s=200x400;q=60"
                 // image="https://pngimg.com/uploads/running_shoes/running_shoes_PNG5827.png"
@@ -123,6 +129,7 @@ function Home() {
             <div className="home__row col-lg-3 col-sm-12 col-md-6">
               <AddItem
                 id={nextId()}
+                category="Mobiles & Other"
                 // image="../images/image.jpg"
                 // image="https://apollo-singapore.akamaized.net/v1/files/ix3b8fb918fn-PK/image;s=200x400;q=60"
                 image="https://www.vhv.rs/dpng/d/599-5997011_airpods-pro-charging-case-hd-png-download.png"
@@ -136,6 +143,7 @@ function Home() {
             <div className="home__row col-lg-3 col-sm-12 col-md-6">
               <AddItem
                 id={nextId()}
+                category="Clothes & Other"
                 // image="../images/image.jpg"
                 // image="https://apollo-singapore.akamaized.net/v1/files/ix3b8fb918fn-PK/image;s=200x400;q=60"
                 image="https://pngimg.com/uploads/watches/watches_PNG9876.png"
@@ -150,7 +158,7 @@ function Home() {
         </div>
         <div className="home-page">
           {/* <div className="add-list flex ">{list}</div> */}
-          <button className="load-more fontb c333 anim s20"> Load More </button>
+          <button className="load-more fontb c333 anim s20">Load More</button>
         </div>
         <img
           src="https://tpc.googlesyndication.com/simgad/10330116627962781763?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qnNuW4iRHOY7TMYBU1IHBAEdaJUiw"

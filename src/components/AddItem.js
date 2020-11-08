@@ -2,7 +2,7 @@
 import React from "react";
 // import { Card } from "react-bootstrap";
 
-function AddItem({ id, image, price, title, location, time }) {
+function AddItem({ id, image, price, title, location, time, category }) {
   // if ("placeholder" in props)
   return (
     <div className="add-item">

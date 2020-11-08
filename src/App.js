@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-empty-pattern */
 import React, { useEffect } from "react";
 import "./App.css";
