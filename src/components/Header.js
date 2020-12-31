@@ -16,6 +16,7 @@ import {
   NavDropdown,
 } from "react-bootstrap";
 import Menu, { SubMenu, MenuItem } from "rc-menu";
+import SearchBox from "./SearchBox";
 
 function Header() {
   const [{ user }, dispatch] = useStateValue();
@@ -217,6 +218,10 @@ function Header() {
           <ExpandMoreIcon className="arrow s24" />
         </div>
         <div className="search flex aic header__search">
+          {/* <SearchBox
+            placeholder="Find Cars, Mobile Phones and more"
+            // handleChange={}
+          /> */}
           <input
             type="text"
             placeholder="Find Cars, Mobile Phones and more"

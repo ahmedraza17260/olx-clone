@@ -12,7 +12,7 @@ function Signin() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [{ user }, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
 
   const signInEP = (e) => {
     e.preventDefault();
@@ -45,6 +45,10 @@ function Signin() {
         var token = result.credential.accessToken;
         // The signed-in user info.
         var user = result.user;
+        dispatch({
+          type: actionTypes.SET_USER,
+          user: result.user,
+        });
         // ...
       })
       .catch(function (error) {
@@ -66,7 +70,10 @@ function Signin() {
         var token = result.credential.accessToken;
         // The signed-in user info.
         var user = result.user;
-        // ...
+        dispatch({
+          type: actionTypes.SET_USER,
+          user: result.user,
+        });
       })
       .catch(function (error) {
         // Handle Errors here.

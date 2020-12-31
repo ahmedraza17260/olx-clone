@@ -6,7 +6,7 @@ const SearchBox = ({ placeholder, handleChange }) => {
     <div>
       <input
         type="search"
-        className="search"
+        className="query font s15 header__searchInput"
         placeholder={placeholder}
         onChange={handleChange}
       />

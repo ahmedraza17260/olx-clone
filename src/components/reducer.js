@@ -4,6 +4,7 @@ export const initialState = {
 
 export const actionTypes = {
   SET_USER: "SET_USER",
+  ADD_TO_BASKET: "ADD_TO_BASKET",
 };
 
 const reducer = (state, action) => {
@@ -14,7 +15,11 @@ const reducer = (state, action) => {
         ...state,
         user: action.user,
       };
-
+    case actionTypes.ADD_TO_BASKET:
+      return {
+        ...state,
+        basket: [...state.basket, action.item],
+      };
     default:
       return state;
   }

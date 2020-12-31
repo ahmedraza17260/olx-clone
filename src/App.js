@@ -10,6 +10,8 @@ import Footer from "./components/Footer";
 import Signin from "./components/Signin";
 import { useStateValue } from "./components/StateProvider";
 import { auth } from "./components/firebase";
+import Detail from "./components/Detail";
+import Checkout from "./components/Checkout";
 
 function App() {
   const [{}, dispatch] = useStateValue();
@@ -43,6 +45,12 @@ function App() {
         <Switch>
           <Route path="/signin">
             <Signin />
+          </Route>
+          <Route path="/detail">
+            <Header />
+            <Detail />
+            {/* <Checkout /> */}
+            <Footer />
           </Route>
           <Route path="/">
             <Header />
